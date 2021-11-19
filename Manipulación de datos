@@ -1,1 +1,10 @@
-asd
+//Primero se fija la ruta del directorio de trabajo
+cd "C:\Users\richard\OneDrive - Universidad Nacional Mayor de San Marcos\Curso de STATA\CENTEC 2\CLASE 1"
+//Comando sysuse para usar data interna alojada en Stata, el clear es para borrar todos los datos en memoria trabajados anteriormente
+sysuse auto, clear
+//El comando "browse" sirve para visualizar la data cargada
+browse
+//El comando "save" se usa para guardar las modificaciones hechas a las data en uso, si es que queremos sobreescribir sobre el archivo antiguo se usa el adocional ",replace"
+save richard.dta ,replace
+// Este comando sirve para importar datos de excel, primero se señala la ruta del archivo junto al nombre del archivivo , luego con "sheet" se señala la hoja que se va usar y luego se señala la primera columna
+import excel "C:\Users\richard\OneDrive - Universidad Nacional Mayor de San Marcos\Curso de STATA\CENTEC\CLASE1_STATA\data\Datos.xlsx", sheet("Anuales") firstrow clear
